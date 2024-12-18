@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block additional_css %}
+    <link rel="stylesheet" href="{% static 'css/delete_product.css' %}">
+{% endblock %}
+{% block content %}
+
+    <div class="delete-product-form-container">
+        <div class="delete-product-form">
+            <h2>Delete product</h2>
+            <form method="POST" action="{% url 'delete product' product_slug=object.slug %}">
+                {{ form.as_p }}
+                {% csrf_token %}
+                <div class="delete-product-buttons-group">
+                    <button class="delete-product-button" type="submit">Delete</button>
+                    <a class="delete-product-button" href="{% url 'product details' product_slug=object.slug %}">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

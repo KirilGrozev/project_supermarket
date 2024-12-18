@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block additional_css %}
+    <link rel="stylesheet" href="{% static 'css/edit_recipe.css' %}">
+{% endblock %}
+{% block content %}
+
+    <div class="edit-recipe-form-container">
+        <div class="edit-recipe-form">
+            <h2>Edit recipe</h2>
+            <form method="POST" action="{% url 'edit recipe' pk=object.pk %}">
+                {{ form.as_p }}
+                {% csrf_token %}
+                <button class="edit-recipe-button" type="submit">Edit</button>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

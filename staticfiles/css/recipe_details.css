@@ -1,0 +1,68 @@
+.recipe-section {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+}
+
+.recipe-product {
+    display: flex;
+    justify-content: space-evenly;
+    width: 1500px;
+    gap: 100px;
+}
+
+.recipe-image {
+    border: 5px solid black;
+}
+
+.recipe-image img {
+    width: 400px;
+    height: 300px;
+}
+
+.recipe-first-container p {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.recipe-second-container p, .recipe-third-container p, .recipe-cooker p {
+    font-size: 25px;
+}
+
+.recipe-first-container h3 {
+    font-size: 35px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.recipe-staff-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 25px;
+}
+
+.recipe-staff-buttons a {
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: red;
+    color: white;
+    padding: 3px 8px;
+    text-decoration: none;
+}
+
+.recipe-staff-buttons a:hover {
+    background-color: forestgreen;
+}
+
+.recipe-details {
+    padding-bottom: 20px;
+}
+
+.ingredients ol {
+    padding-top: 10px;
+}
+
+.ingredients ol li {
+    font-size: 25px;
+}

@@ -1,0 +1,25 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/404.css' %}">
+    <link rel="icon" type="png" href="{% static 'pictures/logo.png' %}">
+    <title>Emi</title>
+</head>
+<body>
+    <div class="tenor-gif-embed" data-postid="5957222" data-share-method="host" data-aspect-ratio="1" data-width="25%">
+        <a href="https://tenor.com/view/taco-dance-food-gif-5957222">Taco Dance GIF</a>
+        <a href="https://tenor.com/search/taco-gifs">Taco GIFs</a>
+    </div> <script type="text/javascript" async src={% url 'https://tenor.com/embed.js' %}></script>
+    <div class="error">
+        <h2>Something went wrong!</h2>
+        <h1>Error 404 - page not found</h1>
+        <div class="return">
+            <a href="{% url 'home' %}">Return</a>
+        </div>
+    </div>
+</body>
+</html>

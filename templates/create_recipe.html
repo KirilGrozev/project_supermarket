@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block additional_css %}
+    <link rel="stylesheet" href="{% static 'css/create_recipe.css'%}">
+{% endblock %}
+{% block content %}
+
+    <div class="create-recipe-form-container">
+        <div class="create-recipe-form">
+            <h2>Create recipe</h2>
+            <form method="POST" action="{% url 'create recipe' %}">
+                {{ form.as_p }}
+                {% csrf_token %}
+                <button class="create-recipe-button" type="submit">Create</button>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

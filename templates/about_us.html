@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block additional_css %}
+    <link rel="stylesheet" href="{% static 'css/about_us.css' %}">
+{% endblock %}
+{% block content %}
+
+    <div class="about-us-container">
+        <div class="about-us-content">
+            <div class="about-us-section">
+                <div class="about-us">
+                    <h2>About us</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias
+                        culpa dolore dolorem eaque ex fugiat hic impedit inventore ipsum,
+                        nulla omnis pariatur quibusdam reiciendis repellendus sequi unde veritatis voluptates.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias
+                        culpa dolore dolorem eaque ex fugiat hic impedit inventore ipsum,
+                        nulla omnis pariatur quibusdam reiciendis repellendus sequi unde veritatis voluptates.
+                    </p>
+                </div>
+                <div class="founders">
+                    <h2>About the founders</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias
+                        culpa dolore dolorem eaque ex fugiat hic impedit inventore ipsum,
+                        nulla omnis pariatur quibusdam reiciendis repellendus sequi unde veritatis voluptates.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias
+                        culpa dolore dolorem eaque ex fugiat hic impedit inventore ipsum,
+                        nulla omnis pariatur quibusdam reiciendis repellendus sequi unde veritatis voluptates.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="cookers">
+            <h2>Cookers</h2>
+            {% for c in object_list %}
+                <div class="about-us-section-cooker">
+                    <div class="chef-info">
+                        <h4>Name: {{ c.name }}</h4>
+                        <p>Age: {{ c.age }}</p>
+                        <p>Speciality: {{ c.speciality }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

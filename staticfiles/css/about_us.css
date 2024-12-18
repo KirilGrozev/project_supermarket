@@ -1,0 +1,36 @@
+.about-us-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 200px;
+    padding: 40px;
+    border-bottom: 3px solid black;
+}
+
+.about-us h2, .founders h2, .cookers h2 {
+    text-align: center;
+    font-size: 40px;
+}
+
+.about-us-section-cooker {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.chef-info {
+    border: 1px solid black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: antiquewhite;
+}
+
+.about-us p, .founders p {
+    font-size: 25px;
+}
+
+.chef-info h4 {
+    font-size: 30px;
+}
+
+.chef-info p {
+    color: red;
+}

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block additional_css %}
+    <link rel="stylesheet" href="{% static 'css/product_details.css' %}">
+{% endblock %}
+{% block content %}
+
+    <div class="product-section">
+        <div class="product-details">
+            <div class="product-container">
+                <div class="product-image">
+                    <img src="{{ object.picture }}" alt="product-image">
+                </div>
+                <h3>{{ object.name }}</h3>
+            </div>
+            <div class="product-info">
+                <div class="product-cooker">
+                    <p>Cooker: {{ object.cooker.name }}</p>
+                </div>
+                <div class="product-price">
+                    <p>Price: {{ object.price }} lv.</p>
+                </div>
+                <div class="product-description">
+                    <p>Description:</p>
+                    <p>
+                        {{ object.description }}
+                    </p>
+                </div>
+                {% if request.user.is_staff %}
+                    <div class="product-staff-buttons">
+                        <a href="{% url 'edit product' product_slug=object.slug %}">Edit</a>
+                        <a href="{% url 'delete product' product_slug=object.slug %}">Delete</a>
+                    </div>
+                {% else %}
+                    <div class="product-button">
+                        <a href="{% url 'basket' %}">Order</a>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

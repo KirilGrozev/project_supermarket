@@ -1,0 +1,100 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    flex: 1 0 auto;
+}
+
+h2 {
+    font-size: 25px;
+    padding: 30px 50px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid black 2px ;
+    background-color: aliceblue;
+    margin-bottom: 40px;
+}
+
+.navigation {
+    display: flex;
+    padding: 40px 50px;
+    gap: 30px;
+}
+
+ .navigation li {
+    list-style: none outside;
+    font-size: 25px;
+    color: black;
+}
+
+.navigation li a {
+    color: black;
+    text-decoration: none;
+}
+
+nav p {
+    padding: 20px;
+}
+
+.logo {
+    text-decoration: none;
+    width: 75px;
+    height: auto;
+}
+
+footer {
+    margin-top: 40px;
+    border-top: solid black 2px;
+    bottom: 0;
+    width: 100%;
+    background-color: antiquewhite;
+    flex-shrink: 0;
+}
+
+footer h4 {
+    font-size: 20px;
+    padding: 10px 20px;
+}
+
+footer ul {
+    display: flex;
+}
+
+footer ul li {
+    font-size: 20px;
+    justify-content: left;
+    padding-left: 60px;
+    list-style: none outside;
+}
+
+footer ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+footer span {
+    display: flex;
+    justify-content: right;
+    font-size: 20px;
+    padding: 20px;
+}
+
+.socials, .basket {
+    display: block;
+    width: 30px;
+}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block additional_css %}
+    <link rel="stylesheet" href="{% static 'css/edit_product.css' %}">
+{% endblock %}
+{% block content %}
+
+    <div class="edit-product-form-container">
+        <div class="edit-product-form">
+            <h2>Edit product</h2>
+            <form method="POST" action="{% url 'edit product' product_slug=object.slug %}">
+                {{ form.as_p }}
+                {% csrf_token %}
+                <button class="edit-product-button" type="submit">Edit</button>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,188 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.home-wrapper {
+    min-height: calc(100vh - 225px);
+}
+
+.home-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-navigation {
+    display: flex;
+    padding: 40px 50px;
+    gap: 30px;
+}
+
+.home-navigation li {
+    list-style: none outside;
+    font-size: 25px;
+}
+
+.home-navigation li a {
+    text-decoration: none;
+    color: white;
+
+}
+
+.home-nav p {
+    padding: 20px;
+}
+
+.logo {
+    text-decoration: none;
+    width: 75px;
+    height: auto;
+}
+
+.background {
+    height: 800px;
+    background-image: url('../pictures/turkish-ka-fte-with-bulgur-vegetables-top-view.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    border-bottom: 5px solid black;
+}
+
+header {
+    padding: 50px 200px;
+    color: white;
+}
+
+header h1 {
+    font-size: 80px;
+}
+
+header h3 {
+    padding: 10px;
+    font-size: 50px;
+}
+
+.home-button-menu {
+    font-size: 35px;
+    padding-top: 20px;
+}
+
+.home-button-menu a {
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: red;
+    color: white;
+    padding: 8px 13px;
+    text-decoration: none;
+}
+
+.home-button-menu a:hover {
+    background-color: forestgreen;
+}
+
+.special-offers {
+    display: flex;
+    justify-content: left;
+    gap: 20px;
+    padding: 50px 20px;
+    flex-wrap: wrap;
+}
+
+.offer {
+    display: flex;
+    gap: 5px;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 600px;
+}
+
+.offer-picture img {
+    width: 300px;
+    height: 250px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.name-price {
+    padding: 10px 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.offer-description {
+    padding: 0 10px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.duration {
+    padding: 10px 10px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.offer-button {
+    font-size: 25px;
+    padding-top: 15px;
+    text-align: center;
+}
+
+.offer-button a {
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: red;
+    color: white;
+    padding: 3px 8px;
+    text-decoration: none;
+}
+
+.offer-button a:hover {
+    background-color: forestgreen;
+}
+
+.no-offers {
+    padding: 50px;
+    font-size: 50px;
+}
+
+.home-footer {
+    margin-top: 40px;
+    border-top: solid black 2px;
+    bottom: 0;
+    width: 100%;
+    background-color: antiquewhite;
+}
+
+.home-footer h4 {
+    font-size: 20px;
+    padding: 10px 20px;
+}
+
+.home-footer ul {
+    display: flex;
+}
+
+.home-footer ul li {
+    font-size: 20px;
+    justify-content: left;
+    margin-left: 60px;
+    list-style: none outside;
+}
+
+.home-footer ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+.home-footer span {
+    display: flex;
+    justify-content: right;
+    font-size: 20px;
+    padding: 20px;
+}
+
+.home-socials, .home-basket {
+    display: block;
+    width: 30px;
+}

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block additional_css %}
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+{% endblock %}
+{% block content %}
+
+    <div class="dashboard-container">
+        {% for p in object_list %}
+            <div class="dashboard-section">
+                <div class="dashboard-product">
+                    <div class="dashboard-image">
+                        <img src="{{ p.picture }}" alt="dashboard-picture">
+                    </div>
+                    <h3>{{ p.name }}</h3>
+                    <div class="dashboard-info">
+                        <div class="dashboard-cooker">
+                            <p>{{ p.cooker.name }}</p>
+                        </div>
+                        <div class="dashboard-price">
+                            <p>{{ p.price }} lv.</p>
+                        </div>
+                    </div>
+                    <div class="dashboard-buttons">
+                        <a href="{% url 'basket' %}">Order</a>
+                        <a href="{% url 'product details' product_slug=p.slug %}">Details</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}

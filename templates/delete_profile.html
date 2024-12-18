@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block additional_css %}
+    <link rel="stylesheet" href="{% static 'css/delete_profile.css' %}">
+{% endblock %}
+{% block content %}
+
+    <div class="delete-profile-form-container">
+        <div class="delete-profile-form">
+            <h2>Are you sure you want to delete your profile?</h2>
+            <form method="POST" action="{% url 'delete profile' request.user.pk %}">
+                {% csrf_token %}
+                <div class="button-option">
+                    <button class="delete-profile-button" type="submit">Delete</button>
+                    <a class="delete-profile-button" href="{% url 'dashboard' %}">Back</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,83 @@
+.create-product-form-container {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+}
+
+.create-product-form {
+    background-color: papayawhip;
+    display: block;
+    width: 500px;
+    border: 0.1px solid black;
+    padding: 40px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.create-product-form h2 {
+    font-size: 40px;
+    text-align: center;
+}
+
+.create-product-button {
+    font-size: 20px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: red;
+    color: white;
+    padding: 3px 8px;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.create-product-button:hover {
+    background-color: forestgreen;
+}
+
+.create-product-form input {
+	background-color: lightgrey;
+	border: 0.1px solid black;
+	border-radius: 5px;
+	height: 30px;
+	width: 100%;
+	padding-left: 2px;
+	margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.create-product-form textarea {
+    background-color: lightgrey;
+	border: 0.1px solid black;
+	border-radius: 5px;
+	height: 100px;
+	width: 100%;
+	padding-left: 2px;
+	margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.create-product-form select {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: lightgrey;
+	border: 0.1px solid black;
+	border-radius: 5px;
+	height: 30px;
+	width: 30%;
+	padding-left: 2px;
+	margin: 5px auto 10px auto;
+}
+
+.create-product-form input[type='date'] {
+    display: flex;
+    justify-content: center;
+    margin: 5px auto 10px auto;
+    width: 40%;
+}
+
+.create-product-form label {
+    font-size: 20px;
+}

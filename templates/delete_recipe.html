@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block additional_css %}
+    <link rel="stylesheet" href="{% static 'css/delete_recipe.css' %}">
+{% endblock %}
+{% block content %}
+
+    <div class="delete-recipe-form-container">
+        <div class="delete-recipe-form">
+            <h2>Delete recipe</h2>
+            <form method="POST" action="{% url 'delete recipe' pk=object.pk %}">
+                {{ form.as_p }}
+                {% csrf_token %}
+                <div class="delete-recipe-buttons-group">
+                    <button class="delete-recipe-button" type="submit">Delete</button>
+                    <a class="delete-recipe-button" href="{% url 'recipe details' pk=object.pk %}">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

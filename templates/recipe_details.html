@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block additional_css %}
+    <link rel="stylesheet" href="{% static 'css/recipe_details.css' %}">
+{% endblock %}
+{% block content %}
+
+    <div class="recipe-section">
+        <div class="recipe-product">
+            <div class="recipe-first-container">
+                <div class="recipe-image">
+                    <img src="{{ object.product.picture }}" alt="recipe-image">
+                </div>
+                <h3>{{ object.product.name }}</h3>
+                <div class="recipe-cooker">
+                    <p>Cooker: {{ object.chef.name }}</p>
+                </div>
+            </div>
+            <div class="recipe-second-container">
+                <div class="ingredients">
+                    <p>Ingredients:</p>
+                    <ol>
+                        {% for product, quantity in object.ingredients.items %}
+                            <li>{{ product }}: {{ quantity }}</li>
+                        {% endfor %}
+                    </ol>
+                </div>
+            </div>
+            <div class="recipe-third-container">
+                <div class="recipe-details">
+                    <p>Recipe:</p>
+                    <p>
+                        {{ object.recipe }}
+                    </p>
+                </div>
+                {% if request.user.is_staff %}
+                    <div class="recipe-staff-buttons">
+                        <a href="{% url 'edit recipe' pk=object.pk %}">Edit</a>
+                        <a href="{% url 'delete recipe' pk=object.pk %}">Delete</a>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

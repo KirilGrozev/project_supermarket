@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block additional_css %}
+    <link rel="stylesheet" href="{% static 'css/recipes.css' %}">
+{% endblock %}
+{% block content %}
+
+    <div class="recipes-list-container">
+        {% for r in object_list %}
+            <div class="recipes-list-section">
+                <div class="recipe">
+                    <div class="recipes-list-image">
+                        <img src="{{ r.product.picture }}" alt="recipes-list-image">
+                    </div>
+                    <h3>{{ r.product.name }}</h3>
+                    <div class="recipes-list-button">
+                        <a href="{% url 'recipe details' pk=r.pk %}">Details</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}
